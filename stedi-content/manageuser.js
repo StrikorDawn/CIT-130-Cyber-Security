@@ -62,8 +62,8 @@ function userlogin() {
     type: "POST",
     url: "https://dev.stedi.me/twofactorlogin",
     data: JSON.stringify({
-      phoneNumber: "2087243485",
-      oneTimePassword: "8893",
+      phoneNumber: userName,
+      oneTimePassword: password,
     }),
     success: function (data) {
       window.location.href = "/timer.html#" + data; //add the token to the url
